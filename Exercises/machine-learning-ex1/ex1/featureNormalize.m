@@ -25,8 +25,10 @@ sigma = zeros(1, size(X, 2));
 %
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
-mu = mean(X)
-sigma = std(X)
+
+% X has not had 1's added to first column yet!
+mu = mean(X);
+sigma = std(X);
 
 X_norm = X - mu;
 X_norm = X_norm ./ sigma;

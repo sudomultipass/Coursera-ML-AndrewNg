@@ -108,7 +108,7 @@ prediction = [1650 3];
 prediction = (prediction - mu)./sigma;
 prediction = [1 prediction];
 
-price = theta' * prediction';  
+price = prediction * theta;  
 
 
 % ============================================================
@@ -155,7 +155,7 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 
 prediction = [1 1650 3];		% NOT normalized since no feature normalization used to find theta
-price = theta' * prediction';  	
+price = prediction * theta;  	
 
 
 % ============================================================
