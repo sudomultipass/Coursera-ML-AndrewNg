@@ -20,7 +20,7 @@ for iter = 1:num_iters
     % Vectorized in parts.  Could be a one-liner, but this is clear to me.
     h = X * theta;						% m-dimensional vector of values of h(x)
     err = h - y;						% error vector (h(x) - y)
-    delta = (1/m) * sum(Err .* X)';		% 2-dim vector (same as theta) 
+    delta = (1/m) * sum(err .* X)';		% 2-dim vector (same as theta) 
     theta = theta - alpha * delta;		% alpha = learning rate
     									% 2-dim vector theta (update theta)
 
